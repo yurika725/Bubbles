@@ -1,0 +1,226 @@
+body{
+  background-image:url("https://previews.123rf.com/images/rondale/rondale1507/rondale150700252/42792365-%E3%82%B7%E3%83%BC%E3%83%A0%E3%83%AC%E3%82%B9%E3%81%AA%E9%9D%92%E3%82%AD%E3%83%A9%E3%82%AD%E3%83%A9-%E3%83%86%E3%82%AF%E3%82%B9%E3%83%81%E3%83%A3%E8%83%8C%E6%99%AF.jpg");
+  background-color:rgb(127, 209, 236);
+  font-family: 'Dancing Script', cursive;
+  width:auto;
+}
+
+
+/* force image size */
+.slide img {
+  width: inherit;
+  height: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.slide {position:absolute; 
+  white-space: nowrap;
+  width: 1100px;
+  height: 807px;
+  overflow: hidden;
+  z-index:5;
+  left:12%
+  /* position:absolute; */
+}
+
+.marble{
+  width:1439px;
+   height:807px;
+  position:relative;
+  right:80%;
+  left:0%;
+/* position:relative;*/}
+
+.slide > :first-child {
+  animation-name: slide;
+  animation-duration: 20s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slide {
+  0% {
+    margin-left: 0;
+  }
+  33% {
+    margin-left: -100%;
+  }
+  66% {
+    margin-left: -200%;
+  }
+  100% {
+    margin-left: -300%;
+  }
+}
+
+.center {
+  margin: auto;
+}
+
+#snow_particlesjs{
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  z-index:5;
+}
+
+.text-top{
+  margin-top: -240px;
+  margin-left:0px;
+  position:top;
+  background-color: #fefefe42;
+  color:#fefefe;
+    font-size: 130px;
+   padding: 0.5em 0;
+    /*上下の余白*/
+    border-top: solid 3px #ffffff;
+    /*上線*/
+    border-bottom: solid 3px #ffffff;
+    /*下線*/
+} 
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.first-text{
+  background-color: #fa7e19;
+  text-align: center;
+  color:rgb(255, 255, 255);
+  font-size:30px;
+border: solid 5px #ff721b;/*線色*/
+padding: 0.5em;/*文字周りの余白*/
+border-radius: 0.5em;/*角丸*/
+margin: 2em;
+}
+.text-center {
+    text-align: center;
+    color: aliceblue;
+    font-size: 70px;
+    padding: 0.5em 0;
+    /*上下の余白*/
+    border-top: solid 3px #ffffff;
+    /*上線*/
+    border-bottom: solid 3px #ffffff;
+    /*下線*/
+}
+
+.second-text{
+  position: relative;
+  padding: 0.5em 0.5em;
+  background: -webkit-linear-gradient(to right, rgb(134, 50, 194), #63fff2);
+  background: linear-gradient(to right, rgb(134, 50, 194), #63fff2);
+  color: white;
+  font-weight: lighter;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.56);
+  font-size:40px;
+  border-radius: 0.5em;/*角丸*/
+  margin: 2em;
+}
+
+.blank{
+  font-size:50px;
+    text-align: center;
+    font-size:30px;
+  margin: 10em;
+}
+
+
+/* レイアウトや見た目のスタイル */
+/* ---------------------------- */
+
+.single-item + .single-item{ 
+  margin-top: 80px;
+  display: block;
+  margin: 0 auto;
+  width:auto;
+  padding:150px;
+}
+
+/* アニメーションスタイル */
+/* ---------------------------- */
+
+/* アニメーション前 */
+.u-fade-type-up{
+  transform: translateX(0px);
+  opacity: 0;
+  width:auto;
+  text-align:center;
+}
+
+/* トリガー発火でis-activeを付与 */
+.u-fade-type-up.is-active{
+  transition: .6s;
+  transform: translateX(10px);
+  opacity: 1;
+  width:auto;
+}
+
+
+
+/* ボタンの装飾　*/
+.btn_tw {
+font-size: 30px;
+  /* 文字の太さをboldに指定 */
+  font-weight: bold;
+  /* 縦方向に.8em、横方向に1.6emの余白を指定 */
+  padding: .8em 1.6em;
+  /* 周囲に0.4emの余白を指定 */
+  margin: 1em 16em;
+  /* 背景色をtwitter色に指定 */
+  background-color: #00acee;
+  /* 文字色を白色に指定 */
+  color: #fff;
+  /* リンクの下線を消す */
+ text-decoration: none;
+  /* ボーダーをなくす */
+  border-style: none;
+  /* 角を丸める */
+  border-radius: 5px;
+  position:absolute;
+  z-index:100;
+  width:auto; 
+
+}
+
+
+/* ボタンホバーで色を薄く */
+.btn_tw:hover {
+  /* 透明度を0.6に */
+  opacity: 0.6;
+  /* 1秒かけて色を薄くする */
+  transition: 1.0s ;
+  /* 文字色を白色に指定 */
+  color: #fff;
+}
+
+
+/* ページTOPに戻る */
+.pagetop{
+  display: none;
+  position: fixed;
+  right: 15px;
+  bottom: 60px;
+}
+.pagetop a{
+  display: block;
+  font-size: 0;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background: #7db4e6;
+  border-radius: 50%;
+  line-height: 50px;
+
+}
+.pagetop a i{
+  font-size: 20px;
+  color:#fff;
+  line-height: 50px;
+}
